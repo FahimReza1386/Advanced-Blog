@@ -7,3 +7,6 @@ sqlparse==0.5.3
 psycopg2-binary
 celery
 redis
+django-ckeditor
+pillow
+django-modeltranslationr
