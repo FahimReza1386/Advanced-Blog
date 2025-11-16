@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block extra_css %}{% endblock %}
+{% block page_title %}
+
+    {{ about.title }}
+
+{% endblock %}
+
+
+{% block content %}
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="page-heading about-page-heading" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="inner-content">
+                        <h2>{% trans 'درباره شرکت ما' %}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** About Area Starts ***** -->
+    <div class="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-image">
+                        <img src="{% static 'assets/images/about-left-image.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right-content">
+                        <h4>{% trans 'درباره ما' %} &amp; {% trans 'مهارت های ما' %}</h4>
+                        {{ about.description|safe }}
+                        <ul>
+                            <li><a href="{{ contact.facebook_link }}"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="{{ contact.twitter_link }}"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="{{ contact.linkedin_link }}"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="{{ contact.instagram_link }}"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** About Area Ends ***** -->
+
+    <!-- ***** Our Team Area Starts ***** -->
+    <section class="our-team">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>{% trans 'تیم شگفت انگیز ما' %}</h2>
+                        <span>{% trans 'متشکل از ۵ نفر' %}</span>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team-item">
+                        <div class="thumb">
+                            <div class="hover-effect">
+                                <div class="inner-content">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <img src="{% static 'assets/images/team-member-01.jpg' %}">
+                        </div>
+                        <div class="down-content">
+                            <h4>{% trans 'سارا فیکر' %}</h4>
+                            <span>{% trans 'توسعه دهنده فرانت اند' %}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team-item">
+                        <div class="thumb">
+                            <div class="hover-effect">
+                                <div class="inner-content">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <img src="{% static 'assets/images/team-member-02.jpg' %}">
+                        </div>
+                        <div class="down-content">
+                            <h4>{% trans 'محمد رضا حسینی' %}</h4>
+                            <span>{% trans 'توسعه دهنده بک اند' %}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team-item">
+                        <div class="thumb">
+                            <div class="hover-effect">
+                                <div class="inner-content">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <img src="{% static 'assets/images/team-member-03.jpg' %}">
+                        </div>
+                        <div class="down-content">
+                            <h4>{% trans 'علی کریمی' %}</h4>
+                            <span>{% trans 'مهندس دواپس' %}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Our Team Area Ends ***** -->
+
+    <!-- ***** Services Area Starts ***** -->
+    <section class="our-services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>{% trans 'خدمات ما' %}</h2>
+                        <span>Details to details is what makes Hexashop different from the other themes.</span>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="service-item">
+                        <h4>{% trans 'تولید نرم افزار های موبایل' %}</h4>
+                        <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
+                        <img src="assets/images/service-01.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="service-item">
+                        <h4>{% trans 'تولید انواع وبسایت' %}</h4>
+                        <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
+                        <img src="assets/images/service-02.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="service-item">
+                        <h4>{% trans 'تولید انواع ربات های تلگرامی' %}</h4>
+                        <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
+                        <img src="assets/images/service-03.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Services Area Ends ***** -->
+
+
+{% endblock %}
+
+{% block extra_js %}{% endblock %}

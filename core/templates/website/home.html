@@ -1,0 +1,367 @@
+{% extends 'base.html' %}
+{% load static i18n %}   
+{% block page_title %}{% endblock %}
+    
+{% block content %}
+
+ <div class="main-banner">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-content">
+                        <div class="thumb">
+                            <div class="inner-content">
+                                <h4>{% trans 'سلام دوستان ' %}</h4>
+                                <span>{% trans 'وبلاگ فهیم وب' %} &amp; {% trans 'یک وبسابت بلاگ نویسی است' %}</span>
+                                <div class="main-border-button">
+                                    <a href="#">{% trans 'بریم بلاگ ها رو بخونیم' %} !</a>
+                                </div>
+                            </div>
+                            <img src="{% static 'assets/images/left-banner-image.jpg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right-content">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>{% trans 'برنامه نویسی' %}</h4>
+                                            <span>{% trans 'بلاگ های حوزه برنامه نویسی' %}</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>{% trans 'در برنامه نویسی' %}</h4>
+                                                <p>{% trans 'بلاگ های برنامه نویسان' %}</p>
+                                                <div class="main-border-button">
+                                                    <a href="#">{% trans 'بریم بخونیم' %}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="{% static 'assets/images/baner-right-image-01.jpg' %}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>{% trans 'اقتصاد' %}</h4>
+                                            <span>{% trans 'بلاگ های حوزه اقتصاد' %}</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>{% trans 'در اقتصاد' %}</h4>
+                                                <p>{% trans 'بلاگ های در حوزه اقتصاد' %}</p>
+                                                <div class="main-border-button">
+                                                    <a href="#">{% trans 'بریم بخونیم' %}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="{% static 'assets/images/baner-right-image-02.jpg' %}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>{% trans 'ورزش' %}</h4>
+                                            <span>{% trans 'بلاگ های حوزه ورزش' %}</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>{% trans 'در ورزش' %}</h4>
+                                                <p>{% trans 'بلاگ های حوزه ورزش' %}</p>
+                                                <div class="main-border-button">
+                                                    <a href="#">{% trans 'بریم بخونیم' %}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="{% static 'assets/images/baner-right-image-03.jpg' %}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content">
+                                            <h4>{% trans 'سیاست' %}</h4>
+                                            <span>{% trans 'بلاگ های حوزه سیاست' %}</span>
+                                        </div>
+                                        <div class="hover-content">
+                                            <div class="inner">
+                                                <h4>{% trans 'در سیاست' %}</h4>
+                                                <p>{% trans 'بلاگ های حوزه سیاست' %}</p>
+                                                <div class="main-border-button">
+                                                    <a href="#">{% trans 'بریم بخونیم' %}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="{% static 'assets/images/baner-right-image-04.jpg' %}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** Men Area Starts ***** -->
+    <section class="section" id="men">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>{% trans 'بلاگ های عمومی' %}</h2>
+                        <span>{% trans 'بلاگ های عمومی در دید تمامی عموم قرار میگیرد ولی بلاگ های ویژه نیازمند ثبت نام است.' %}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="men-item-carousel">
+                        <div class="owl-men-item owl-carousel">
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="{% static 'assets/images/men-01.jpg' %}" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Classic Spring</h4>
+                                    <span>$120.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="{% static 'assets/images/men-02.jpg' %}" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Air Force 1 X</h4>
+                                    <span>$90.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="{% static 'assets/images/men-03.jpg' %}" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Love Nana ‘20</h4>
+                                    <span>$150.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="{% static 'assets/images/men-01.jpg' %}" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Classic Spring</h4>
+                                    <span>$120.00</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Men Area Ends ***** -->
+
+    <!-- ***** Explore Area Starts ***** -->
+    <section class="section" id="explore">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-content">
+                        <h2>{% trans 'تمامی بلاگ ها' %}</h2>
+                        <span>{% trans 'بلاگ های شما حداقل ۵۰۰ ویو رایگان از طرف ما میگیرند' %}.</span>
+                        <div class="quote">
+                            <i class="fa fa-quote-left"></i><p>{% trans 'بلاگ های ما از سراسر نقاط جهان قابل تماشا میباشد .' %}.</p>
+                        </div>
+                        <p>{% trans 'امیدوارم کار با بلاگیکو برای شما آسوده باشد' %}.</p>
+                        <p>{% trans 'در ازای ویو گرفتن بلاگ های ویژه شما از بلاگیکو جایزه دریافت میکند'  %}</p>
+                        <div class="main-border-button">
+                            <a href="products.html">{% trans 'بریم بخونیم' %}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right-content">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="leather">
+                                    <h4>{% trans 'همه بلاگ ها' %}</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="first-image">
+                                    <img src="{% static 'assets/images/explore-image-01.jpg' %}" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="second-image">
+                                    <img src="{% static 'assets/images/explore-image-02.jpg' %}" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="types">
+                                    <h4>{% trans 'میخوای بلاگ خودتو بسازی؟' %}</h4>
+                                    <span>{% trans 'وبلاگ های ساخته شده تا الان :' %} 1380</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Explore Area Ends ***** -->
+
+    <!-- ***** Social Area Starts ***** -->
+    <section class="section" id="social">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>{% trans 'رسانه های اجتماعی' %}</h2>
+                        <span>{% trans 'بلاگ های معروف' %}...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row images">
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Fashion</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="{% static 'assets/images/instagram-01.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>New</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="{% static 'assets/images/instagram-02.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Brand</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="{% static 'assets/images/instagram-03.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Makeup</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="{% static 'assets/images/instagram-04.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Leather</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="{% static 'assets/images/instagram-05.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Bag</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="{% static 'assets/images/instagram-06.jpg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Social Area Ends ***** -->
+
+{% endblock %}
