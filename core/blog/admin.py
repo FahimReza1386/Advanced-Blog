@@ -2,7 +2,7 @@
 from django.contrib import admin
 
 # Local Imports
-from blog.models.blog import BlogModel, BlogCategoryModel
+from blog.models.blog import BlogModel, BlogCategoryModel, BlogImageModel
 
 @admin.register(BlogModel)
 class BlogAdmin(admin.ModelAdmin):
@@ -14,3 +14,9 @@ class BlogAdmin(admin.ModelAdmin):
 class BlogCategoryAdmin(admin.ModelAdmin):
     list_display = ('title', 'parent', 'created_at')
     search_fields = ('title',)
+
+@admin.register(BlogImageModel)
+class BlogImageAdmin(admin.ModelAdmin):
+    list_display = ('blog', 'image', 'created_at')
+    list_filter=('blog__title',)
+    search_fields = ('blog__title',)

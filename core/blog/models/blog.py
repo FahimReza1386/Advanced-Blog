@@ -44,9 +44,10 @@ class BlogModel(DatetimeModel):
     def __str__(self):
         return self.title
     
-class BlogCategoryModel(DatetimeModel, MPTTModel):
+class BlogCategoryModel(MPTTModel, DatetimeModel):
     title = models.CharField(
-        max_length=200,
+        max_length=100,
+        unique=True,
         verbose_name=_("اسم")
     ),
     parent = TreeForeignKey(
@@ -58,10 +59,31 @@ class BlogCategoryModel(DatetimeModel, MPTTModel):
         verbose_name=_("والد")
     ),
 
+    class MPTTMeta:
+        order_insertion_by = ['title']
+
     class Meta:
         verbose_name = _("دسته بندی بلاگ")
         verbose_name_plural = _("دسته بندی های بلاگ")
-        ordering = ['-id']
 
     def __str__(self):
         return self.title
+    
+
+class BlogImageModel(DatetimeModel):
+    blog = models.ForeignKey(
+        BlogModel,
+        on_delete=models.CASCADE,
+        verbose_name=_("بلاگ")
+    )
+    image = models.ImageField(
+        upload_to='blog_images/',
+        verbose_name=_("تصویر")
+    )
+
+    class Meta:
+        verbose_name = _("تصویر بلاگ")
+        verbose_name_plural = _("تصاویر بلاگ")
+
+    def __str__(self):
+        return self.blog.title
