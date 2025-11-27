@@ -13,8 +13,8 @@ class BlogModelTranslationOptions(TranslationOptions):
         'description',
     )
 
-# @register(BlogCategoryModel)
-# class BlogCategoryModelTranslationOptions(TranslationOptions):
-#     fields = (
-#         'title',
-#     )
+@register(BlogCategoryModel)
+class BlogCategoryModelTranslationOptions(TranslationOptions):
+    fields = (
+        'title',
+    )

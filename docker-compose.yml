@@ -17,6 +17,7 @@ services:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
+      
     expose:
       - "5432"
 
@@ -41,12 +42,25 @@ services:
 
   celery:
     container_name: celery_worker
+    volumes:
+      - ./core:/usr/src/app
+    build:
+      context: .
+      dockerfile: dockerfile/dev/Dockerfile
+    command: celery -A core worker --loglevel=info
+    depends_on:
+      - db
+      - redis
+      - backend
+
+  celery_beat:
+    container_name: celery_beat
     build:
       context: .
       dockerfile: dockerfile/dev/Dockerfile
     volumes:
       - ./core:/usr/src/app
-    command: celery -A core worker --loglevel=info
+    command: celery -A core beat --loglevel=info
     depends_on:
       - db
       - redis

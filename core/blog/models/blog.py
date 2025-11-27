@@ -5,6 +5,7 @@ from django.utils.translation import gettext_lazy as _
 # Third-Party Imports
 from ckeditor.fields import RichTextField
 from mptt.models import MPTTModel, TreeForeignKey
+
 # Local Imports
 from utils.models import DatetimeModel
 
@@ -35,6 +36,11 @@ class BlogModel(DatetimeModel):
         default=BlogTypeModel.premium.value,
         verbose_name=_("نوع")
     )
+    category= models.ForeignKey(
+        'BlogCategoryModel',
+        on_delete=models.CASCADE,
+        verbose_name=_("دسته بندی")
+    )
     
     class Meta:
         verbose_name = _("بلاگ")
@@ -45,19 +51,18 @@ class BlogModel(DatetimeModel):
         return self.title
     
 class BlogCategoryModel(MPTTModel, DatetimeModel):
-    title = models.CharField(
-        max_length=100,
-        unique=True,
-        verbose_name=_("اسم")
-    ),
-    parent = TreeForeignKey(
+    title=models.CharField(
+        max_length=255,
+        verbose_name=_("نام")
+    )
+    parent=TreeForeignKey(
         'self',
         on_delete=models.CASCADE,
         null=True,
         blank=True,
         related_name='children',
         verbose_name=_("والد")
-    ),
+    )
 
     class MPTTMeta:
         order_insertion_by = ['title']

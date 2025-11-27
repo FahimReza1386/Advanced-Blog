@@ -51,6 +51,7 @@ INSTALLED_APPS = [
 
     # Third-Party Installed
     'ckeditor',
+    'mptt',
 ]
 
 MIDDLEWARE = [
