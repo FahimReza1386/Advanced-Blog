@@ -8,7 +8,7 @@ from blog.models.blog import BlogModel, BlogCategoryModel, BlogImageModel
 
 @admin.register(BlogModel)
 class BlogAdmin(TranslationAdmin):
-    list_display = ('title', 'type', 'status', 'created_at')
+    list_display = ('id', 'title', 'type', 'status', 'created_at')
     list_filter = ('type', 'status')
     search_fields = ('title', 'description')
 
@@ -24,8 +24,9 @@ class BlogAdmin(TranslationAdmin):
 
 @admin.register(BlogCategoryModel)
 class BlogCategoryAdmin(TranslationAdmin):
-    list_display = ('title', 'created_at')
+    list_display = ('id', 'title', 'created_at')
     search_fields = ('title',)
+    ordering = ('-created_at',)
 
     class Media:
         js = (
