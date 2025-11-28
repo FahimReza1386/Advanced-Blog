@@ -51,11 +51,20 @@ class BlogModel(DatetimeModel):
         return self.title
     
 class BlogCategoryModel(MPTTModel, DatetimeModel):
+<<<<<<< HEAD
+    title = models.CharField(
+        max_length=100,
+        unique=True,
+        verbose_name=_("اسم")
+    )
+    parent = TreeForeignKey(
+=======
     title=models.CharField(
         max_length=255,
         verbose_name=_("نام")
     )
     parent=TreeForeignKey(
+>>>>>>> abc40c9431b873ab31ae8ff4d00ad295cfea23d7
         'self',
         on_delete=models.CASCADE,
         null=True,
