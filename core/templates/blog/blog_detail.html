@@ -1,0 +1,237 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block page_title %}{% trans 'پست' %}-{{ object.pk }}{% endblock %}
+
+{% block extra_css %}
+
+<style>
+    /* بخش کلی نظرات */
+#Comment {
+    padding: 80px 0;
+    background: #f8f9fa;
+    font-family: 'Vazirmatn', 'Tahoma', sans-serif;
+}
+
+#Comment .container {
+    max-width: 1200px;
+}
+
+/* عنوان بخش */
+.comment-heading h4 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2d2d2d;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.comment-heading h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    border-radius: 2px;
+}
+
+/* هر نظر */
+.comment {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+    position: relative;
+    overflow: hidden;
+}
+
+.comment::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, #007bff, #0056b3);
+    border-radius: 0 16px 16px 0;
+}
+
+.comment:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* نویسنده و تاریخ */
+.comment .author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+    gap: 10px;
+}
+
+.comment .author h5 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2d2d2d;
+}
+
+.comment .author span {
+    font-size: 13px;
+    color: #6c757d;
+    background: #e9ecef;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+/* متن نظر */
+.comment p {
+    margin: 0;
+    line-height: 1.8;
+    color: #444;
+    font-size: 15px;
+}
+
+/* وقتی نظری وجود ندارد */
+.comment + p,
+.comment:empty + p {
+    text-align: center;
+    font-size: 17px;
+    color: #888;
+    padding: 40px 20px;
+    background: #fff;
+    border-radius: 16px;
+    border: 2px dashed #dee2e6;
+}
+
+/* حالت تاریک (اختیاری - اگر سایتت دارک مود داره) */
+@media (prefers-color-scheme: dark) {
+    #Comment {
+        background: #121212;
+    }
+    
+    .comment {
+        background: #1e1e1e;
+        border-color: #333;
+        color: #e0e0e0;
+    }
+    
+    .comment::before {
+        background: linear-gradient(180deg, #0d6efd, #0b5ed7);
+    }
+    
+    .comment .author h5 {
+        color: #ffffff;
+    }
+    
+    .comment p {
+        color: #bbbbbb;
+    }
+    
+    .comment-heading h4 {
+        color: #ffffff;
+    }
+    
+    .comment-heading h4::after {
+        background: linear-gradient(90deg, #0d6efd, #0b5ed7);
+    }
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+    #Comment {
+        padding: 60px 0;
+    }
+    
+    .comment-heading h4 {
+        font-size: 24px;
+    }
+    
+    .comment {
+        padding: 20px;
+    }
+    
+    .comment .author {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+</style>
+
+{% endblock %}
+
+{% block content %}
+
+
+
+    <!-- ***** Product Area Starts ***** -->
+    <section class="section" style="margin-top: 10rem;" id="product">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                <div class="left-images">
+                     <div class="slider" style="height: 40rem;">
+                        <div class="slides">
+                            {% for img in images %}
+                                {% if img.blog == object %}
+                                    <img src="{{ img.image.url }}" alt="{{ blog.title }}" class="slide active">
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        
+                        <button class="prev">❮</button>
+                        <button class="next">❯</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div id="myselect" class="right-content">
+                    <h4>{{ object.title }}</h4>
+                    <span class="price">{% trans 'نوع پست :' %}{{ object.get_type_display }}</span>
+                    <ul class="stars">
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                    </ul>
+                    <span>{{ object.description }}</span>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section id="Comment">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="comment-heading">
+                        <h4>نظرات کاربران</h4>
+                    </div>
+                    {% for comment in comments %}
+                    <div class="comment">
+                        <div class="author">
+                            <h5>{{ comment.user.username }}</h5>
+                            <span>{{ comment.created_at }}</span>
+                        </div>
+                        <p>{{ comment.content }}</p>
+                    </div>
+                    {% empty %}
+                    <p>هنوز نظری وجود ندارد.</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+{% endblock %}
+
+{% block extra_js %}{% endblock %}

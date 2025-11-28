@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
     <title>{% block page_title %}{% endblock %}</title>
 
@@ -21,6 +22,66 @@
     <link rel="stylesheet" href="{% static 'assets/css/owl-carousel.css' %}">
 
     <link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
+    {% if request.LANGUAGE_CODE == 'fa' %}
+        <link rel="stylesheet" href="{% static 'assets/css/rtl.css' %}">
+    {% endif %} 
+    <style>
+.slider {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- دکمه‌های Prev و Next --- */
+
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.slider button:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+</style>
+
     {% block extra_css %}{% endblock %}
     </head>
     <body>
@@ -49,8 +110,11 @@
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav" {% if request.LANGUAGE_CODE == 'fa' %}style="float: left;"{% endif %}>
                             <li><a href="{% url 'website:home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">{% trans 'خانه' %}</a></li>
+                            <li><a href="{% url 'blog:blog-list' %}">{% trans 'بلاگ ها' %}</a></li>
+                            
                             <li><a href="{% url 'website:about-us' %}" class="{% if request.resolver_match.url_name == 'about-us' %}active{% endif %}">{% trans 'درباره ما' %}</a></li>
                             <li><a href="{% url 'website:contact-us' %}" class="{% if request.resolver_match.url_name == 'contact-us' %}active{% endif %}">{% trans 'ارتباط با ما' %}</a></li>
+                        
                             {% if request.LANGUAGE_CODE == 'en'%}                         
                             <li><a href="#" onclick="ChangeLanguage('fa')">{% trans 'Persian' %}</a></li>  
                             {% else %}
@@ -150,6 +214,8 @@
     
     <!-- Global Init -->
     <script src="{% static 'assets/js/custom.js' %}"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
 
     <script>
 
@@ -186,6 +252,30 @@
             });
         }
     </script>
+    <script>
+document.querySelectorAll('.slider').forEach(slider => {
+    let index = 0;
+    const slides = slider.querySelectorAll('.slide');
+    const prevBtn = slider.querySelector('.prev');
+    const nextBtn = slider.querySelector('.next');
+
+    function showSlide(i) {
+        slides.forEach(s => s.classList.remove('active'));
+        slides[i].classList.add('active');
+    }
+
+    nextBtn.addEventListener('click', () => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+    });
+
+    prevBtn.addEventListener('click', () => {
+        index = (index - 1 + slides.length) % slides.length;
+        showSlide(index);
+    });
+});
+</script>
+{% include 'messages.html' %}
 {% block extra_js %}{% endblock %}
   </body>
 </html>

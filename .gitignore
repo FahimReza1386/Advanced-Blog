@@ -215,3 +215,7 @@ celerybeat-schedule
 celerybeat-schedule.db
 celerybeat-schedule-wal
 celerybeat-schedule-shm
+
+
+
+media/

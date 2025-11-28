@@ -1,0 +1,41 @@
+#myselect .item .down-content ul.stars {
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+
+#myselect .item .down-content h4 {
+    float: right;
+    font-size: 22px;
+    color: #2a2a2a;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+#myselect .item .down-content span {
+    float: right;
+    font-size: 18px;
+    margin:2rem 0 !important;
+    color: #a1a1a1;
+    font-weight: 500;
+    display: block;
+}
+
+#myselect.right-content h4{
+    float: right;
+}
+
+#myselect.right-content span {
+    float: right;
+    margin: 2rem 0 !important;
+}
+
+#myselect.right-content .stars{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#myselect.right-content span {
+    color: black;
+}
