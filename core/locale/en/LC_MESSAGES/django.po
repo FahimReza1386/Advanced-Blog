@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-04 07:55+0000\n"
+"POT-Creation-Date: 2025-11-28 22:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,74 +17,513 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 #: accounts/managers/user_manager.py:9
 msgid "ایمیل باید وارد شود ."
-msgstr ""
+msgstr "Email is required."
 
-#: accounts/models/profile.py:15
+#: accounts/models/profile.py:15 blog/models/blog.py:56
 msgid "نام"
-msgstr ""
+msgstr "First Name"
 
 #: accounts/models/profile.py:19
 msgid "نام خانوادگی"
-msgstr ""
+msgstr "Last Name"
 
 #: accounts/models/profile.py:25 accounts/models/user.py:49
 msgid "کاربر"
-msgstr ""
+msgstr "User"
 
 #: accounts/models/profile.py:30
 msgid "بیوگرافی"
-msgstr ""
+msgstr "Biography"
 
 #: accounts/models/profile.py:35
 msgid "تصویر پروفایل"
-msgstr ""
+msgstr "Profile Picture"
 
-#: accounts/models/profile.py:41
+#: accounts/models/profile.py:41 templates/website/contact.html:106
+#: website/models/pages.py:71
 msgid "شماره تلفن"
-msgstr ""
+msgstr "Phone Number"
 
 #: accounts/models/profile.py:45
 msgid "پروفایل"
-msgstr ""
+msgstr "Profile"
 
 #: accounts/models/profile.py:46
 msgid "پروفایل‌ها"
-msgstr ""
+msgstr "Profiles"
 
 #: accounts/models/user.py:13
 msgid "مشتری"
-msgstr ""
+msgstr "Customer"
 
 #: accounts/models/user.py:14
 msgid "ادمین"
-msgstr ""
+msgstr "Admin"
 
 #: accounts/models/user.py:15 accounts/models/user.py:35
 msgid "کاربر ارشد"
-msgstr ""
+msgstr "Senior User"
 
-#: accounts/models/user.py:19
+#: accounts/models/user.py:19 templates/website/contact.html:113
+#: website/models/pages.py:47
 msgid "ایمیل"
-msgstr ""
+msgstr "Email"
 
 #: accounts/models/user.py:23
 msgid "فعال شده"
-msgstr ""
+msgstr "Activated"
 
 #: accounts/models/user.py:27
 msgid "پرسنل"
-msgstr ""
+msgstr "Staff"
 
 #: accounts/models/user.py:31
 msgid "تایید شده"
-msgstr ""
+msgstr "Verified"
 
-#: accounts/models/user.py:40
+#: accounts/models/user.py:40 blog/models/blog.py:37
 msgid "نوع"
-msgstr ""
+msgstr "Type"
 
 #: accounts/models/user.py:50
 msgid "کاربران"
+msgstr "Users"
+
+#: blog/models/blog.py:15
+msgid "ویژه"
+msgstr "Premium"
+
+#: blog/models/blog.py:16
+msgid "عادی"
+msgstr "Normal"
+
+#: blog/models/blog.py:19
+msgid "نمایش"
+msgstr "Show"
+
+#: blog/models/blog.py:20
+msgid "عدم نمایش"
+msgstr "Hide"
+
+#: blog/models/blog.py:24 website/models/pages.py:14 website/models/pages.py:27
+#: website/models/pages.py:43
+msgid "عنوان"
+msgstr "Title"
+
+#: blog/models/blog.py:27
+msgid "جزئیات"
+msgstr "Details"
+
+#: blog/models/blog.py:32
+msgid "وضعیت"
+msgstr "Status"
+
+#: blog/models/blog.py:42
+msgid "دسته بندی"
+msgstr "Category"
+
+#: blog/models/blog.py:46 blog/models/blog.py:82
+msgid "بلاگ"
+msgstr "Blog"
+
+#: blog/models/blog.py:47 templates/base.html:113 templates/base.html:153
+#: templates/blog/blog_list.html:4
+msgid "بلاگ ها"
+msgstr "Blogs"
+
+#: blog/models/blog.py:64
+msgid "والد"
+msgstr "Parent"
+
+#: blog/models/blog.py:71
+msgid "دسته بندی بلاگ"
+msgstr "Blog Category"
+
+#: blog/models/blog.py:72
+msgid "دسته بندی های بلاگ"
+msgstr "Blog Categories"
+
+#: blog/models/blog.py:86
+msgid "تصویر"
+msgstr "Image"
+
+#: blog/models/blog.py:90
+msgid "تصویر بلاگ"
+msgstr "Blog Image"
+
+#: blog/models/blog.py:91
+msgid "تصاویر بلاگ"
+msgstr "Blog Images"
+
+#: blog/views.py:36
+msgid ""
+"مشتری گرامی برای دیدن پست های ویژه باید اشتراک های فهیم وب را تهیه نمیایید ."
 msgstr ""
+"Dear customer, to view premium posts you need to purchase a Fahim Web "
+"subscription."
+
+#: templates/base.html:112 templates/base.html:163
+msgid "خانه"
+msgstr "Home"
+
+#: templates/base.html:115 templates/base.html:164
+#: templates/website/about.html:39
+msgid "درباره ما"
+msgstr "About Us"
+
+#: templates/base.html:116 templates/base.html:166
+#: templates/website/contact.html:20
+msgid "ارتباط با ما"
+msgstr "Contact Us"
+
+#: templates/base.html:119
+msgid "Persian"
+msgstr "Persian"
+
+#: templates/base.html:121
+msgid "انگلیسی"
+msgstr "English"
+
+#: templates/base.html:153
+msgid "دسته بندی های پر بازدید"
+msgstr "Most Viewed Categories"
+
+#: templates/base.html:155 templates/website/home.html:36
+msgid "در برنامه نویسی"
+msgstr "Programming"
+
+#: templates/base.html:156 templates/website/home.html:56
+msgid "در اقتصاد"
+msgstr "Economy"
+
+#: templates/base.html:157 templates/website/home.html:96
+msgid "در سیاست"
+msgstr "Politics"
+
+#: templates/base.html:161
+msgid "لینک های ضروری"
+msgstr "Useful Links"
+
+#: templates/base.html:165 templates/base.html:170 templates/base.html:172
+msgid "کمک"
+msgstr "Help"
+
+#: templates/base.html:170
+msgid "اطلاعات"
+msgstr "Information"
+
+#: templates/base.html:173
+msgid "سوالات متداول"
+msgstr "FAQ"
+
+#: templates/base.html:174
+msgid "ثبت نام"
+msgstr "Sign Up"
+
+#: templates/base.html:175
+msgid "ورود"
+msgstr "Login"
+
+#: templates/base.html:182 templates/website/contact.html:107
+msgid "با مدیریت"
+msgstr "Contact Management"
+
+#: templates/blog/blog_detail.html:4
+msgid "پست"
+msgstr "Post"
+
+#: templates/blog/blog_detail.html:198 templates/blog/blog_list.html:64
+msgid "نوع پست :"
+msgstr "Post Type:"
+
+#: templates/blog/blog_list.html:13
+msgid "تمامی بلاگ ها را بخوانید"
+msgstr "Read All Blogs"
+
+#: templates/blog/blog_list.html:14
+msgid "این صفحه به شما کمک میکند در همه موضوعی دانش خود را افزایش دهید .."
+msgstr "This page helps you increase your knowledge in all topics."
+
+#: templates/blog/blog_list.html:29
+msgid "تنها پست های عمومی را میتوانید کامل بخوانید"
+msgstr "You can fully read only public posts"
+
+#: templates/blog/blog_list.html:30
+msgid "با خرید اشتراک یک ساله فهیم وب سه ماه اشتراک رایگان دریافت کنید"
+msgstr "Buy a one-year Fahim Web subscription and get 3 months free"
+
+#: templates/website/about.html:20
+msgid "درباره شرکت ما"
+msgstr "About Our Company"
+
+#: templates/website/about.html:39
+msgid "مهارت های ما"
+msgstr "Our Skills"
+
+#: templates/website/about.html:60
+msgid "تیم شگفت انگیز ما"
+msgstr "Our Amazing Team"
+
+#: templates/website/about.html:61
+msgid "متشکل از ۵ نفر"
+msgstr "Consisting of 5 members"
+
+#: templates/website/about.html:80
+msgid "سارا فیکر"
+msgstr "Sara Fekr"
+
+#: templates/website/about.html:81
+msgid "توسعه دهنده فرانت اند"
+msgstr "Frontend Developer"
+
+#: templates/website/about.html:101
+msgid "محمد رضا حسینی"
+msgstr "Mohammad Reza Hosseini"
+
+#: templates/website/about.html:102
+msgid "توسعه دهنده بک اند"
+msgstr "Backend Developer"
+
+#: templates/website/about.html:122
+msgid "علی کریمی"
+msgstr "Ali Karimi"
+
+#: templates/website/about.html:123
+msgid "مهندس دواپس"
+msgstr "DevOps Engineer"
+
+#: templates/website/about.html:138
+msgid "خدمات ما"
+msgstr "Our Services"
+
+#: templates/website/about.html:144
+msgid "تولید نرم افزار های موبایل"
+msgstr "Mobile App Development"
+
+#: templates/website/about.html:151
+msgid "تولید انواع وبسایت"
+msgstr "Website Development"
+
+#: templates/website/about.html:158
+msgid "تولید انواع ربات های تلگرامی"
+msgstr "Telegram Bot Development"
+
+#: templates/website/contact.html:41
+msgid "سلام کن خجالت نکش !"
+msgstr "Say hello, don’t be shy!"
+
+#: templates/website/contact.html:42
+msgid "در فهیم وب ما به سلام شما هم پاسخ میدیم ."
+msgstr "At Fahim Web, we reply to your greetings too!"
+
+#: templates/website/contact.html:48 templates/website/contact.html:85
+msgid "نام شما"
+msgstr "Your Name"
+
+#: templates/website/contact.html:53 templates/website/contact.html:90
+msgid "ایمیل شما"
+msgstr "Your Email"
+
+#: templates/website/contact.html:58
+msgid "پیام شما"
+msgstr "Your Message"
+
+#: templates/website/contact.html:78
+msgid "عضویت در باشگاه مشتریان"
+msgstr "Join Our Customer Club"
+
+#: templates/website/contact.html:79
+msgid "میدونستی ما در باشگاه مشتریان کد های تخفیف ماهانه میزاریم ؟"
+msgstr "Did you know we post monthly discount codes in our customer club?"
+
+#: templates/website/contact.html:105
+msgid "موقعیت شرکت"
+msgstr "Company Location"
+
+#: templates/website/contact.html:112
+msgid "ساعت کاری"
+msgstr "Working Hours"
+
+#: templates/website/contact.html:114 templates/website/home.html:288
+msgid "رسانه های اجتماعی"
+msgstr "Social Media"
+
+#: templates/website/contact.html:114
+msgid "فیسبوک"
+msgstr "Facebook"
+
+#: templates/website/contact.html:114
+msgid "اینستاگرام"
+msgstr "Instagram"
+
+#: templates/website/contact.html:114
+msgid "لینکدین"
+msgstr "LinkedIn"
+
+#: templates/website/contact.html:114
+msgid "تلگرام"
+msgstr "Telegram"
+
+#: templates/website/home.html:14
+msgid "سلام دوستان "
+msgstr "Hello friends "
+
+#: templates/website/home.html:15
+msgid "وبلاگ فهیم وب"
+msgstr "Fahim Web Blog"
+
+#: templates/website/home.html:15
+msgid "یک وبسابت بلاگ نویسی است"
+msgstr "is a professional blogging website"
+
+#: templates/website/home.html:17
+msgid "بریم بلاگ ها رو بخونیم"
+msgstr "Let’s go read the blogs"
+
+#: templates/website/home.html:31
+msgid "برنامه نویسی"
+msgstr "Programming"
+
+#: templates/website/home.html:32
+msgid "بلاگ های حوزه برنامه نویسی"
+msgstr "Programming Blogs"
+
+#: templates/website/home.html:37
+msgid "بلاگ های برنامه نویسان"
+msgstr "Programmer Blogs"
+
+#: templates/website/home.html:39 templates/website/home.html:59
+#: templates/website/home.html:79 templates/website/home.html:99
+#: templates/website/home.html:246
+#, fuzzy
+#| msgid "بریم بلاگ ها رو بخونیم"
+msgid "بریم بخونیم"
+msgstr "Let’s go read the blogs"
+
+#: templates/website/home.html:51
+msgid "اقتصاد"
+msgstr "Economy"
+
+#: templates/website/home.html:52
+msgid "بلاگ های حوزه اقتصاد"
+msgstr "Economy Blogs"
+
+#: templates/website/home.html:57
+#, fuzzy
+#| msgid "بلاگ های حوزه اقتصاد"
+msgid "بلاگ های در حوزه اقتصاد"
+msgstr "Economy Blogs"
+
+#: templates/website/home.html:71
+msgid "ورزش"
+msgstr "Sports"
+
+#: templates/website/home.html:72 templates/website/home.html:77
+msgid "بلاگ های حوزه ورزش"
+msgstr "Sports Blogs"
+
+#: templates/website/home.html:76
+msgid "در ورزش"
+msgstr "Sports"
+
+#: templates/website/home.html:91
+msgid "سیاست"
+msgstr "Politics"
+
+#: templates/website/home.html:92 templates/website/home.html:97
+msgid "بلاگ های حوزه سیاست"
+msgstr "Politics Blogs"
+
+#: templates/website/home.html:121
+msgid "بلاگ های عمومی"
+msgstr "Public Blogs"
+
+#: templates/website/home.html:122
+msgid ""
+"بلاگ های عمومی در دید تمامی عموم قرار میگیرد ولی بلاگ های ویژه نیازمند ثبت "
+"نام است."
+msgstr ""
+"Public blogs are visible to everyone, but premium blogs require registration."
+
+#: templates/website/home.html:238
+msgid "تمامی بلاگ ها"
+msgstr "All Blogs"
+
+#: templates/website/home.html:239
+msgid "بلاگ های شما حداقل ۵۰۰ ویو رایگان از طرف ما میگیرند"
+msgstr "Your blogs get at least 500 free views from us"
+
+#: templates/website/home.html:241
+msgid "بلاگ های ما از سراسر نقاط جهان قابل تماشا میباشد ."
+msgstr "Our blogs are viewable from anywhere in the world."
+
+#: templates/website/home.html:243
+msgid "امیدوارم کار با بلاگیکو برای شما آسوده باشد"
+msgstr "I hope using Blogico is easy and enjoyable for you"
+
+#: templates/website/home.html:244
+msgid "در ازای ویو گرفتن بلاگ های ویژه شما از بلاگیکو جایزه دریافت میکند"
+msgstr "You receive rewards from Blogico for views on your premium blogs"
+
+#: templates/website/home.html:255
+msgid "همه بلاگ ها"
+msgstr "All Blogs"
+
+#: templates/website/home.html:270
+msgid "میخوای بلاگ خودتو بسازی؟"
+msgstr "Want to create your own blog?"
+
+#: templates/website/home.html:271
+msgid "وبلاگ های ساخته شده تا الان :"
+msgstr "Blogs created so far:"
+
+#: templates/website/home.html:289
+msgid "بلاگ های معروف"
+msgstr "Popular Blogs"
+
+#: website/models/pages.py:18 website/models/pages.py:19
+msgid "صفحه خانه"
+msgstr "Home Page"
+
+#: website/models/pages.py:30
+msgid "محتوا"
+msgstr "Content"
+
+#: website/models/pages.py:34 website/models/pages.py:35
+msgid "صفحه درباره ما"
+msgstr "About Us Page"
+
+#: website/models/pages.py:51
+msgid "لینک اینستاگرام"
+msgstr "Instagram Link"
+
+#: website/models/pages.py:55
+msgid "لینک فیسبوک"
+msgstr "Facebook Link"
+
+#: website/models/pages.py:59
+msgid "لینک لینکدین"
+msgstr "LinkedIn Link"
+
+#: website/models/pages.py:63
+msgid "لینک توییتر"
+msgstr "Twitter Link"
+
+#: website/models/pages.py:67
+msgid "نام مدیریت"
+msgstr "Manager Name"
+
+#: website/models/pages.py:75
+msgid "ساعات کاری"
+msgstr "Working Hours"
+
+#: website/models/pages.py:79
+msgid "آدرس"
+msgstr "Address"
+
+#: website/models/pages.py:83 website/models/pages.py:84
+msgid "صفحه ارتباط با ما"
+msgstr "Contact Us Page"
